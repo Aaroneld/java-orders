@@ -18,16 +18,16 @@ public class Order {
     private double advanceamount;
 
     @ManyToOne
-    @JoinColumn( name = "custcode",
+    @JoinColumn(name = "custcode",
             nullable = false)
-    @JsonIgnoreProperties
+    @JsonIgnoreProperties(value = "orders")
     private Customer customer;
 
     @ManyToMany()
     @JoinTable(name = "orderspayments",
                 joinColumns = @JoinColumn( name = "ordnum"),
                 inverseJoinColumns = @JoinColumn(name = "paymentid"))
-    @JsonIgnoreProperties
+    @JsonIgnoreProperties(value = "orders")
     Set<Payment> payments = new HashSet<>();
 
     private String orderdescription;
