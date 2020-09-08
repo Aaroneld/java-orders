@@ -1,14 +1,14 @@
-package com.lambdaschool.crudyorders;
+package lambda.aaron.orders;
 
 import com.github.javafaker.Faker;
-import com.lambdaschool.crudyorders.models.Agent;
-import com.lambdaschool.crudyorders.models.Customer;
-import com.lambdaschool.crudyorders.models.Order;
-import com.lambdaschool.crudyorders.models.Payment;
-import com.lambdaschool.crudyorders.repositories.AgentsRepository;
-import com.lambdaschool.crudyorders.repositories.CustomersRepository;
-import com.lambdaschool.crudyorders.repositories.OrdersRepository;
-import com.lambdaschool.crudyorders.repositories.PaymentRepository;
+import lambda.aaron.orders.models.Agent;
+import lambda.aaron.orders.models.Customer;
+import lambda.aaron.orders.models.Order;
+import lambda.aaron.orders.models.Payment;
+import lambda.aaron.orders.repositories.AgentRepository;
+import lambda.aaron.orders.repositories.CustomerRepository;
+import lambda.aaron.orders.repositories.OrderRepository;
+import lambda.aaron.orders.repositories.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -28,19 +28,19 @@ public class SeedData implements CommandLineRunner
      * Connects the customer table to this SeedData method
      */
     @Autowired
-    private CustomersRepository custrepos;
+    private CustomerRepository custrepos;
 
     /**
      * Connects the agents table to this SeedData method
      */
     @Autowired
-    private AgentsRepository agentrepos;
+    private AgentRepository agentrepos;
 
     /**
      * Connects the orders table to this SeedData method
      */
     @Autowired
-    private OrdersRepository ordersrepos;
+    private OrderRepository ordersrepos;
 
     /**
      * Connects the payment table to this SeedData method
