@@ -41,5 +41,15 @@ public class Payment {
         this.orders = orders;
     }
 
+    public long getPaymentid() {
+        return paymentid;
+    }
 
+    public String getType() {
+        return type;
+    }
+
+    public Set<Order> getOrders() {
+        return orders;
+    }
 }

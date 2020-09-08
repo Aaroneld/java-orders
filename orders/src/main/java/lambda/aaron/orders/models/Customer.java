@@ -173,4 +173,19 @@ public class Customer {
     public void setAgent(Agent agent) {
         this.agent = agent;
     }
+
+    @Override
+    public String toString() {
+        return getCustname() + " "
+                + getCustcountry() + " "
+                + getCustcity() + " "
+                + getWorkingarea() + " "
+                + getPhone() + " "
+                + getAgent() + " "
+                + getReceiveamt() + " "
+                + getOpeningamt() + " "
+                + getPaymentamt() + " "
+                + getOutstandingamt() + " "
+                + getOrders();
+    }
 }

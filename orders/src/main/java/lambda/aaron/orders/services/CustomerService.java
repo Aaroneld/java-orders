@@ -11,4 +11,10 @@ public interface CustomerService {
     List<Customer> findCustomerById(long code);
 
     List<Customer> findCustomerWithMatchingName(String name);
+
+    Customer save(Customer save);
+
+    Customer update(Customer customer, long id);
+
+    void delete(long id);
 }
